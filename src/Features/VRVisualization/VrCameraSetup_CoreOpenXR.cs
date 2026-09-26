@@ -425,7 +425,7 @@ namespace UnityVRMod.Features.VrVisualization
             currentEyeCamera.transform.localPosition = position;
             currentEyeCamera.transform.localRotation = rotation;
 #elif CPP
-            // Doesnt work for the version of unity im using (2020.3.36f1)
+            // Doesnt work for the version of unity im using (2020.3.36f1) so i commented it out
             // currentEyeCamera.transform.SetLocalPositionAndRotation(position, rotation);
             currentEyeCamera.transform.localPosition = position;
             currentEyeCamera.transform.localRotation = rotation;
