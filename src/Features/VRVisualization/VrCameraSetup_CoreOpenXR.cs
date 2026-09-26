@@ -425,7 +425,11 @@ namespace UnityVRMod.Features.VrVisualization
             currentEyeCamera.transform.localPosition = position;
             currentEyeCamera.transform.localRotation = rotation;
 #elif CPP
-            currentEyeCamera.transform.SetLocalPositionAndRotation(position, rotation);
+            // Doesnt work for the version of unity im using (2020.3.36f1)
+            // currentEyeCamera.transform.SetLocalPositionAndRotation(position, rotation);
+            currentEyeCamera.transform.localPosition = position;
+            currentEyeCamera.transform.localRotation = rotation;
+
 #endif
 
             Matrix4x4 projM = CreateProjectionMatrixFromFovUsingFrustum(_locatedViews[eyeIndex].fov, currentEyeCamera.nearClipPlane, currentEyeCamera.farClipPlane);
